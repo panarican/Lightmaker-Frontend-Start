@@ -2,22 +2,44 @@ Lightmaker-Frontend-Start
 =========================
 
 <h2>Have a folder structured like:</h2>
-    assets
-js (no javascript will be in base except for main.js)
-main.js  (require in all initial modules)
-modules (compressed files go here)
-modules-uncompressed (uncompressed files go here)
-(namespace folders)
-vendor (plugin, things we did not create)
-require.js (always needed)
-html5shiv.js (for compatibility with IE8)
-css
-sass
-styles.scss
-images (no imagery in base folder)
-global (all layout-based imagery. header/footer)
-(namespace folders)
-What should the main.js file look like:
+
+<ul>
+	<li>assets
+		<ul>
+			<li>js (no javascript will be in base except for main.js)
+				<ul>
+					<li>main.js  (require in all initial modules)</li>
+					<li>modules (compressed files go here)</li>
+					<li>modules-uncompressed (uncompressed files go here)
+						<ul>
+							<li>(namespace folders)</li>
+						</ul>
+					</li>
+					<li>vendor (plugin, things we did not create)
+						<ul>
+							<li>require.js (always needed)</li>
+							<li>html5shiv.js (for compatibility with IE8)</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>css
+			<li>sass
+				<ul>
+					<li>styles.scss</li>
+				</ul>
+			</li>
+			<li>images (no imagery in base folder)
+				<ul>
+					<li>global (all layout-based imagery. header/footer)</li>
+				</ul>
+			</li>
+			<li>(namespace folders)</li>
+		</ul>
+	</li>
+</ul>
+
+<h2>What should the main.js file look like:</h2>
 
 (example main.js file included)
 
