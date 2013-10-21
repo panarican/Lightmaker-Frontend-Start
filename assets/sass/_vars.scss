@@ -1,0 +1,26 @@
+/* ==========================================================================
+    VARS
+   ========================================================================== */
+
+// media query breakpoints
+$tablet: 980px;
+$desktop: $tablet + 1;
+$phone: 768px;
+
+// dimensions
+$menuBarWidth: 60px;
+$expandedMenuWidth: 240px;
+
+// fonts
+$theme-font-regular: 'DINCondRegular';
+$theme-font-bold: 'DINCondBold';
+
+// colors
+$bgSiteColor: #ffffff;
+$bgSectionColor: #f4f4f4;
+$bgDarkSectionColor: #151718;
+$bgPlayerBarColor: #000000;
+$bodyCopyColor: #151718;
+$borderColor: #bdc2ca;
+$linkColor: #ff0000;
+

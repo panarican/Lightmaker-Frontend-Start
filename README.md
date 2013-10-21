@@ -18,17 +18,19 @@ Lightmaker-Frontend-Start
 					<li>vendor (plugin, things we did not create)
 						<ul>
 							<li>require.js (always needed)</li>
-							<li>html5shiv.js (for compatibility with IE8)</li>
+							<li>html5.js (for compatibility with IE8)</li>
 						</ul>
 					</li>
 				</ul>
 			</li>
-			<li>css
+			<li>css</li>
 			<li>sass
 				<ul>
 					<li>styles.scss</li>
 				</ul>
 			</li>
+			<li>fonts (all webfonts need to be in here)</li>
+			<li>icons (all Icomoon fonts need be in here)</li>
 			<li>images (no imagery in base folder)
 				<ul>
 					<li>global (all layout-based imagery. header/footer)</li>

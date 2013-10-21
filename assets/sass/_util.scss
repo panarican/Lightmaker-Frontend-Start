@@ -1,0 +1,94 @@
+/* ==========================================================================
+    MIXINS
+   ========================================================================== */
+
+// breakpoint mixins
+@mixin border-radius-fix($w) {
+  @include border-top-left-radius($w);
+  @include border-top-right-radius($w);
+  @include border-bottom-left-radius($w);
+  @include border-bottom-right-radius($w);
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content
+  }
+}
+
+@mixin tablet-landscape {
+  @media (max-width: 1190px) {
+    @content
+  }
+}
+
+@mixin phone {
+  @media (max-width: $phone) {
+    @content
+  }
+}
+  
+// aspect ratio
+// rewritten, simplified
+@mixin aspect-ratio($w, $h) {
+  $slope: $h / $w;
+  $height: $h - $w * $slope;
+  padding-top: $slope * 100%;
+  height: $height;
+}
+
+@mixin user-select($select) {
+  $select: unquote($select);
+  @include experimental(user-select, $select, -moz, -webkit, not -o, not -ms, -khtml, official); 
+}
+
+// keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+@mixin animation($def) {
+  -webkit-animation: $def; /* Safari 4+ */
+  -moz-animation:    $def; /* Fx 5+ */
+  -o-animation:      $def; /* Opera 12+ */
+  animation:         $def; /* IE 10+ */
+}
+
+@mixin clearfix {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020"; 
+        display: block; 
+        height: 0; 
+        overflow: hidden; 
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// util classes
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

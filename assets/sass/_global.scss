@@ -1,0 +1,38 @@
+/* ==========================================================================
+    GLOBAL
+   ========================================================================== */
+
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+	font: 10px Arial, sans-serif;
+	color: $bodyCopyColor;
+	background-color: $bgSiteColor;
+	overflow-x: hidden;
+}
+a {
+	text-decoration: none;
+  &[href] {
+    color: $linkColor;
+    &:hover {
+      color: $bodyCopyColor;
+    }
+  }
+  
+  @include desktop {
+    @include single-transition(all, 250ms);
+  }
+}
+button {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: none;
+	cursor: pointer;
+	@include border-radius-fix(0);
+  @include desktop {
+    @include single-transition(all, 250ms);
+  }
+}
