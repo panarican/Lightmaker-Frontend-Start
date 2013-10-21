@@ -113,6 +113,7 @@ Lightmaker-Frontend-Start
 		</ul>
 	</li>
 	<li>Comment all "modules, all sections within those "modules", and variations of those "modules"</li>
+	<li>The optimal transition speed for most rollovers is 0.25s</li>
 </ul>
 
 <h2>Pushing to Live:</h2>

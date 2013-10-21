@@ -22,6 +22,6 @@ a {
   }
   
   @include desktop {
-    @include single-transition(all, 250ms);
+    @include single-transition(all, $transitionSpeed);
   }
 }
