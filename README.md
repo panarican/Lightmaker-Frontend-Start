@@ -40,53 +40,80 @@ Lightmaker-Frontend-Start
 </ul>
 
 <h2>What should the main.js file look like:</h2>
-
 (example main.js file included)
+<ul>
+	<li>Define goes at the top
+		<ul>
+			<li>List all dependencies</li>
+		</ul>
+	</li>
+</ul>
 
-Define goes at the top
-List all dependencies
-Javascript module configuration:
-
+<h3>Javascript module configuration:</h3>
 (example javascript module)
+<ul>
+	<li>All globally shared variables will be defined in the config method.</li>
+	<li>Classes will all be capitalized (ex. Class)</li>
+	<li>Methods inside of the class will be camel case (ex. camelCase)</li>
+	<li>Variable naming:
+		<ul>
+			<li>Underscored variables will be private to the method it is incapsulated (ex. _self)</li>
+			<li>Referencing jQuery objects, use $ in front of the name (ex. $content)</li>
+			<li>Variables that are defined within the config method will be camel case.</li>
+			<li>Constants will be all caps (ex. CONSTANT)</li>
+			<li>Don't abbreviate variables (For legibility sake, ex. _index instead of i)</li>
+		</ul>
+	</li>
+	<li>Init method
+		<ul>
+			<li>All methods that need to be called on page load</li>
+		</ul>
+	</li>
+	<li>Events method
+		<ul>
+			<li>All methods that are events (ex. On events)</li>
+		</ul>
+	</li>
+	<li>(Namespacing methods)</li>
+	<li>No javascript file should be longer than 800 lines of code
+		<ul>
+			<li>re-evaluate if longer</li>
+		</ul>
+	</li>
+	<li>Comment every method, explain how it works and what it is trying to do</li>
+</ul>
 
-All globally shared variables will be defined in the config method.
-Classes will all be capitalized (ex. Class)
-Methods inside of the class will be camel case (ex. camelCase)
-Variable naming:
-Underscored variables will be private to the method it is incapsulated (ex. _self)
-Referencing jQuery objects, use $ in front of the name (ex. $content)
-Variables that are defined within the config method will be camel case.
-Constants will be all caps (ex. CONSTANT)
-Don't abbreviate variables (For legibility sake, ex. _index instead of i)
-Init method
-All methods that need to be called on page load
-Events method
-All methods that are events (ex. On events)
-(Namespacing methods)
-No javascript file should be longer than 800 lines of code
-re-evaluate if longer
-Comment every method, explain how it works and what it is trying to do
-CSS
+<h2>CSS</h2>
 (Create sample SCSS folder)
-Use COMPASS do not use vendor prefixes (ex. no -webkit-, or -moz-).
-No sass file will be styling a "page" only "modules"
-Class names will be lowercase and dash separated (ex. .module-name)
-Class names will be named after the piece they are styling, not descriptive of their styles (do NOT use .colorGrey or .style1)
-Media queries will live within the immediate module class, not within the individual classes inside it.
-Always tab space and put properties on their own lines.
-Try not to ever duplicate CSS, if written correctly, you should be able to take any class and just plug it in.
-Do NOT go deeper than 4 classes deep.
-Never style IDs.
-Style ONLY classes except for html, body, and a tags.
-The only other time to style elements is inside a WYSIWYG content area.
-All icons will be using Icomoon.
-Move the SVG link below EOT in the Fonts properties. (It looks smoother in Windows)
-All fonts will be specified inside the _fonts.scss
-All icons will be specified inside the _icons.scss
-All global variables need to be specified inside the _vars.scss
-Every element will be defined the following:
-@include box-sizing(border-box);
-Comment all "modules, all sections within those "modules", and variations of those "modules"
+<ul>
+	<li>Use COMPASS do not use vendor prefixes (ex. no -webkit-, or -moz-).</li>
+	<li>No sass file will be styling a "page" only "modules"</li>
+	<li>Class names will be lowercase and dash separated (ex. .module-name)</li>
+	<li>Class names will be named after the piece they are styling, not descriptive of their styles (do NOT use .colorGrey or .style1)</li>
+	<li>Media queries will live within the immediate module class, not within the individual classes inside it.</li>
+	<li>Always tab space and put properties on their own lines.</li>
+	<li>Try not to ever duplicate CSS, if written correctly, you should be able to take any class and just plug it in.</li>
+	<li>Do NOT go deeper than 4 classes deep.</li>
+	<li>Never style IDs.</li>
+	<li>Style ONLY classes except for html, body, and a tags.
+		<ul>
+			<li>The only other time to style elements is inside a WYSIWYG content area.</li>
+		</ul>
+	</li>
+	<li>All icons will be using Icomoon.</li>
+	<li>Move the SVG link below EOT in the Fonts properties. (It looks smoother in Windows)</li>
+	<li>All fonts will be specified inside the _fonts.scss</li>
+	<li>All icons will be specified inside the _icons.scss</li>
+	<li>All global variables need to be specified inside the _vars.scss</li>
+	<li>Every element will be defined the following:
+		<ul>
+			<li>@include box-sizing(border-box);</li>
+		</ul>
+	</li>
+	<li>Comment all "modules, all sections within those "modules", and variations of those "modules"</li>
+</ul>
 
-Pushing to Live:
-Minify all CSS and Javascript before pushing to Live
+<h2>Pushing to Live:</h2>
+<ul>
+	<li>Minify all CSS and Javascript before pushing to Live</li>
+</ul>
