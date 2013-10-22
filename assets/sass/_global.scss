@@ -25,3 +25,79 @@ a {
     @include single-transition(all, $transitionSpeed);
   }
 }
+
+/* ==========================================================================
+    HEADER
+   ========================================================================== */
+
+.header {
+  width: 100%;
+  display: block;
+
+  // header advertisement section
+  .header-ad {
+    display: inline-block;
+  }
+
+  // desktop-specific styles
+  @include desktop {
+    background: url(../images/global/image.jpg);
+  }
+
+  // tablet-specific styles
+  @include tablet {
+
+    .header-ad {
+      position: absolute;
+    }
+
+  }
+
+  // phone-specific styles
+  @include phone {
+
+    .header-ad {
+      position: relative;
+    }
+
+  }
+
+}
+
+/* ==========================================================================
+    FOOTER
+   ========================================================================== */
+
+.footer {
+  width: 100%;
+  display: block;
+
+  // footer advertisement section
+  .footer-ad {
+    display: inline-block;
+  }
+
+  // desktop-specific styles
+  @include desktop {
+    background: url(../images/global/image.jpg);
+  }
+
+  // tablet-specific styles
+  @include tablet {
+
+    .facebook-ad {
+      position: absolute;
+    }
+
+  }
+
+  // phone-specific styles
+  @include phone {
+
+    .facebook-ad {
+      position: relative;
+    }
+
+  }
+
+}
